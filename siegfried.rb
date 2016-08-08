@@ -2,10 +2,10 @@ require "language/go"
 require "yaml"
 
 class Siegfried < Formula
-  desc "Fast PRONOM-based file identification tool"
+  desc "Signature-based file identification tool"
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v1.6.1.tar.gz"
-  sha256 "823b251dcc507eb819c51928ac100310718fa7a35afc6fedf1ffe2441da667b6"
+  url "https://github.com/richardlehane/siegfried/archive/v1.6.2.tar.gz"
+  sha256 "544bb1bb5380df2605fe065d93c0db9267079e3e7aafab09f7716f831b581b4c"
   head "https://github.com/richardlehane/siegfried.git", :branch => "develop"
 
   depends_on "go" => :build
