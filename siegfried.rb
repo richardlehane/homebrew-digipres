@@ -4,8 +4,8 @@ require "yaml"
 class Siegfried < Formula
   desc "Signature-based file identification tool"
   homepage "http://www.itforarchivists.com/siegfried"
-  url "https://github.com/richardlehane/siegfried/archive/v1.6.4.tar.gz"
-  sha256 "3c99f464f15a330251132c4b687af7a94f9f0e502868e980ec5ac35c729b61eb"
+  url "https://github.com/richardlehane/siegfried/archive/v1.6.5.tar.gz"
+  sha256 "0401b6faba86d7aba8418d9f9203c32fb066fefaa8a01a00eb1ce0fe270c8856"
   head "https://github.com/richardlehane/siegfried.git", :branch => "develop"
 
   depends_on "go" => :build
