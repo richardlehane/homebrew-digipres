@@ -13,7 +13,7 @@ class Siegfried < Formula
   def install
     # Avoid installing signature files into the user's home directory;
     # install them into share instead.
-    inreplace "config/brew.go", "/usr/share/siegfried", share/"siegfried"
+    inreplace "pkg/config/brew.go", "/usr/share/siegfried", share/"siegfried"
 
     mkdir_p buildpath/"src/github.com/richardlehane"
     ln_s buildpath, buildpath/"src/github.com/richardlehane/siegfried"
