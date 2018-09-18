@@ -1,8 +1,8 @@
 class Droid < Formula
   desc "Java-based PRONOM file identification tool"
   homepage "http://digital-preservation.github.com/droid/"
-  url "http://nationalarchives.gov.uk/documents/information-management/droid-binary-6.2.1-bin.zip"
-  sha256 "45d8928f1425c1c0fbc0f8fb3dea9f07a0fe6848d0dd4696e15da1c52152d627"
+  url "http://www.nationalarchives.gov.uk/documents/information-management/droid-binary-6.4-bin.zip"
+  sha256 "9dd6289c1f03d8a9d628ab0127954e05acf4aa2f5f7d606b8a1b78996a98b815"
 
   def install
     libexec.install Dir["*.jar"]
