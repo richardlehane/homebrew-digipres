@@ -8,13 +8,13 @@ class Droid < Formula
     libexec.install Dir["*.jar"]
     libexec.install "lib"
     inreplace "droid.sh" do |s|
-      s.gsub! "droid-command-line-6.2.1.jar", "#{libexec}/droid-command-line-6.2.1.jar"
-      s.gsub! "droid-ui-6.2.1.jar", "#{libexec}/droid-ui-6.2.1.jar"
+      s.gsub! "$DROID_HOME/droid-command-line-6.4.jar", "#{libexec}/droid-command-line-6.4.jar"
+      s.gsub! "$DROID_HOME/droid-ui-6.4.jar", "#{libexec}/droid-ui-6.4.jar"
     end
     bin.install "droid.sh" => "droid"
   end
 
-  def test
-    system "#{bin}/droid", "--version"
+  test do
+    assert_equal "6.4", shell_output("#{bin}/droid --version").chomp
   end
 end
