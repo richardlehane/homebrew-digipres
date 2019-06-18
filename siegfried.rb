@@ -18,11 +18,9 @@ class Siegfried < Formula
     mkdir_p buildpath/"src/github.com/richardlehane"
     ln_s buildpath, buildpath/"src/github.com/richardlehane/siegfried"
 
-    ENV["GOPATH"] = buildpath
-
-    system "go", "build", "-tags", "brew",
+    system "go", "build", "-tags", "brew", "-mod", "vendor",
                  "github.com/richardlehane/siegfried/cmd/sf"
-    system "go", "build", "-tags", "brew",
+    system "go", "build", "-tags", "brew", "-mod", "vendor",
                  "github.com/richardlehane/siegfried/cmd/roy"
 
     bin.install "sf", "roy"
