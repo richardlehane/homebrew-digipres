@@ -5,7 +5,7 @@ class Siegfried < Formula
   desc "Signature-based file identification tool"
   homepage "https://www.itforarchivists.com/siegfried"
   url "https://github.com/richardlehane/siegfried/archive/v1.8.0.tar.gz"
-  sha256 "b15ccd921faf56d381afe3438ee44c2b7724a144d5fed9345a9c10a2dd9b6c61"
+  sha256 "417f909242d30350d75bfd3441a6de189b038e396048055f01b6f21a2d29b6c9"
   head "https://github.com/richardlehane/siegfried.git", :branch => "develop"
 
   depends_on "go" => :build
