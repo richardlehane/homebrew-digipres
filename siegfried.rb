@@ -6,7 +6,7 @@ class Siegfried < Formula
   homepage "https://www.itforarchivists.com/siegfried"
   url "https://github.com/richardlehane/siegfried/archive/v1.9.1.tar.gz"
   sha256 "a3a680337ea35f9506ec4630803814e32ede0d43b73380ae4ff78ce475336f43"
-  head "https://github.com/richardlehane/siegfried.git", :branch => "develop"
+  head "https://github.com/richardlehane/siegfried.git", :branch => "main"
 
   depends_on "go" => :build
 
@@ -18,10 +18,9 @@ class Siegfried < Formula
     mkdir_p buildpath/"src/github.com/richardlehane"
     ln_s buildpath, buildpath/"src/github.com/richardlehane/siegfried"
 
-    system "go", "build", "-tags", "brew", "-mod", "vendor",
-                 "github.com/richardlehane/siegfried/cmd/sf"
-    system "go", "build", "-tags", "brew", "-mod", "vendor",
-                 "github.com/richardlehane/siegfried/cmd/roy"
+    system "go", "build", "-tags", "github.com/richardlehane/siegfried/cmd/sf"
+                 
+    system "go", "build", "-tags", "brew", "github.com/richardlehane/siegfried/cmd/roy"
 
     bin.install "sf", "roy"
     (share/"siegfried").install Dir["src/github.com/richardlehane/siegfried/cmd/roy/data/*"]

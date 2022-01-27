@@ -1,0 +1,17 @@
+# This workflow tests the siegfried.rb formula.
+#
+# Trigger this workflow by pushing a commit updating siegfried.rb
+name: Test
+  push:
+    paths:
+      - siegfried.rb
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: Install homebrew
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Check the formula
+        run: brew install --build-from-source ./siegfried.rb
