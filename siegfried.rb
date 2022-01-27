@@ -18,11 +18,10 @@ class Siegfried < Formula
     mkdir_p buildpath/"src/github.com/richardlehane"
     ln_s buildpath, buildpath/"src/github.com/richardlehane/siegfried"
 
-    system "go", "build", "-tags", "github.com/richardlehane/siegfried/cmd/sf"
+    system "go", "build", "-o", bin/"sf", "-tags", "github.com/richardlehane/siegfried/cmd/sf"
                  
-    system "go", "build", "-tags", "brew", "github.com/richardlehane/siegfried/cmd/roy"
+    system "go", "build", "-o", bin/"roy", "-tags", "brew", "github.com/richardlehane/siegfried/cmd/roy"
 
-    bin.install "sf", "roy"
     (share/"siegfried").install Dir["src/github.com/richardlehane/siegfried/cmd/roy/data/*"]
   end
 
