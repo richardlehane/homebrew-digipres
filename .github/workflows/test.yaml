@@ -2,9 +2,10 @@
 #
 # Trigger this workflow by pushing a commit updating siegfried.rb
 name: Test
+on:
   push:
-    paths:
-      - siegfried.rb
+   # paths:
+   #   - siegfried.rb
 jobs:
   test:
     runs-on: macos-latest
