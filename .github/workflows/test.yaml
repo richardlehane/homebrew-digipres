@@ -13,4 +13,4 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: Check the formula
-        run: brew install --build-from-source siegfried
+        run: brew install --build-from-source ./siegfried.rb
