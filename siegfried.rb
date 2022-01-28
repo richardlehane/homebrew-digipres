@@ -6,7 +6,7 @@ class Siegfried < Formula
   homepage "https://www.itforarchivists.com/siegfried"
   url "https://github.com/richardlehane/testsf/archive/refs/tags/v1.0.9.tar.gz"
   sha256 "bbd79efe8e842a73ef8ee4cfefaa3f0d8b4d138c0e105042eee83aa14348ca55"
-  head "https://github.com/richardlehane/siegfried.git", :branch => "main"
+  head "https://github.com/richardlehane/testsf.git", :branch => "main"
 
   depends_on "go" => :build
 
