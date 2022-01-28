@@ -11,6 +11,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Check the formula
-        run: brew install richardlehane/digipres/siegfried
+        run: |
+          brew link --overwrite go
+          brew install richardlehane/digipres/siegfried
       - name: Test siegfried
         run: sf -version
