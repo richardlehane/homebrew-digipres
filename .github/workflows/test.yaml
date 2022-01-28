@@ -4,14 +4,15 @@
 name: Test
 on:
   push:
-   # paths:
-   #   - siegfried.rb
+   paths:
+     - siegfried.rb
 jobs:
   test:
     runs-on: macos-latest
     steps:
-      - run: brew list
-      - name: Check the formula
+      - name: List brew installs
+        run: brew list
+      - name: Check the siegfried formula
         run: |
           brew remove go@1.15
           brew install richardlehane/digipres/siegfried
