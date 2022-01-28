@@ -13,7 +13,7 @@ jobs:
       - run: brew list
       - name: Check the formula
         run: |
-          brew remove go
+          brew remove go@1.15
           brew install richardlehane/digipres/siegfried
       - name: Test siegfried
         run: sf -version
