@@ -10,9 +10,7 @@ jobs:
   test:
     runs-on: macos-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
       - name: Check the formula
-        run: brew install --build-from-source ./siegfried.rb
+        run: brew install richardlehane/digipres/siegfried
       - name: Test siegfried
         run: sf -version
