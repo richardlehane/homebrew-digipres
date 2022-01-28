@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Check the formula
         run: |
-          brew install go
+          brew unlink go@1.15
           brew install richardlehane/digipres/siegfried
       - name: Test siegfried
         run: sf -version
