@@ -14,7 +14,7 @@ jobs:
         run: brew list
       - name: Check the siegfried formula
         run: |
-          brew uninstall go
+          brew remove go@1.17
           brew install richardlehane/digipres/siegfried
       - name: Test siegfried
         run: sf -version
