@@ -13,8 +13,6 @@ jobs:
       - name: List brew installs
         run: brew list
       - name: Check the siegfried formula
-        run: |
-          brew remove go@1.15
-          brew install richardlehane/digipres/siegfried
+        run: brew install richardlehane/digipres/siegfried
       - name: Test siegfried
         run: sf -version
