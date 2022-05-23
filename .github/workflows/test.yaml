@@ -13,6 +13,8 @@ jobs:
       - name: List brew installs
         run: brew list
       - name: Check the siegfried formula
-        run: brew install richardlehane/digipres/siegfried
+        run: |
+          brew uninstall go
+          brew install richardlehane/digipres/siegfried
       - name: Test siegfried
         run: sf -version
