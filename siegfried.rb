@@ -5,7 +5,7 @@ class Siegfried < Formula
   desc "Signature-based file identification tool"
   homepage "https://www.itforarchivists.com/siegfried"
   url "https://api.github.com/repos/richardlehane/siegfried/tarball/v1.9.3"
-  sha256 "bb21b486f5f78343ad2a317880a8b8e7a1e46c3f9fc1a859785685d93297b103"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   head "https://github.com/richardlehane/siegfried.git", :branch => "main"
 
   depends_on "go" => :build
