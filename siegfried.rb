@@ -1,4 +1,3 @@
-require "language/go"
 require "yaml"
 
 class Siegfried < Formula
